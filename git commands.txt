@@ -16,6 +16,173 @@ git log
 git commit -m "my first git commit"
 git remote add origin https://github.com/dameeta/cgitest.git
 git push -u origin master
+=================================================================
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 ~
+$ pwd
+/c/Users/ADMIN
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 ~
+$ ls
+ADMIN@DESKTOP-6PTEN1D MINGW64 ~
+$ cd c:
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /c
+$ pwd
+/c
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /c
+$ ls
+ADMIN@DESKTOP-6PTEN1D MINGW64 /c
+$ cd cgi
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /c/cgi
+$ git init
+Initialized empty Git repository in C:/cgi/.git/
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /c/cgi (master)
+$ git config --global user.name "dameeta"
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /c/cgi (master)
+$ git config --global user.email "dameeta835@gmail.com"
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /c/cgi (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be commit
+        gittestfile.txt
+
+nothing added to commit but untracked files present (use "gi
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /c/cgi (master)
+$ git add .
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /c/cgi (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   gittestfile.txt
+
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /c/cgi (master)
+$ git log
+fatal: your current branch 'master' does not have any commit
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /c/cgi (master)
+$ git commit -m "my first git commit"
+[master (root-commit) 5aff20d] my first git commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 gittestfile.txt
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /c/cgi (master)
+$ git log
+
+
+commit 5aff20dc9fd027bb47b5cf1086aec2defb1c7413 (HEAD -> mas
+Author: dameeta <dameeta835@gmail.com>
+Date:   Mon May 9 11:39:22 2022 +0530
+
+    my first git commit
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /c/cgi (master)
+$
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /c/cgi (master)
+$ git branch -M testmybranch
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /c/cgi (testmybranch)
+$ git remote add origin https://github.com/dameeta/cgitest.git
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /c/cgi (testmybranch)
+$ git push -u origin testmybranch
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 225 bytes | 225.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/dameeta/cgitest.git
+ * [new branch]      testmybranch -> testmybranch
+branch 'testmybranch' set up to track 'origin/testmybranch'.
+
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /c/cgi (testmybranch)
+$ git status
+On branch testmybranch
+Your branch is up to date with 'origin/testmybranch'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git commands.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /c/cgi (testmybranch)
+$ git add .
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /c/cgi (testmybranch)
+$ git status
+On branch testmybranch
+Your branch is up to date with 'origin/testmybranch'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   git commands.txt
+
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /c/cgi (testmybranch)
+$ git commit -m "my second git commit"
+[testmybranch 7c16fdc] my second git commit
+ 1 file changed, 21 insertions(+)
+ create mode 100644 git commands.txt
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /c/cgi (testmybranch)
+$ git status
+On branch testmybranch
+Your branch is ahead of 'origin/testmybranch' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /c/cgi (testmybranch)
+$ git log
+commit 7c16fdca38ce81400f0fe46a0025d192d5a5b3c6 (HEAD -> testmybranch)
+Author: dameeta <dameeta835@gmail.com>
+Date:   Mon May 9 11:51:17 2022 +0530
+
+    my second git commit
+
+commit 5aff20dc9fd027bb47b5cf1086aec2defb1c7413 (origin/testmybranch)
+Author: dameeta <dameeta835@gmail.com>
+Date:   Mon May 9 11:39:22 2022 +0530
+
+    my first git commit
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /c/cgi (testmybranch)
+$ git remote add origin https://github.com/dameeta/cgitest.git
+error: remote origin already exists.
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /c/cgi (testmybranch)
+$ git push -u origin testmybranch
+
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 512 bytes | 256.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/dameeta/cgitest.git
+   5aff20d..7c16fdc  testmybranch -> testmybranch
+branch 'testmybranch' set up to track 'origin/testmybranch'.
+
+
+
 
 
 
